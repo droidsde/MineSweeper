@@ -10,21 +10,30 @@
 #define __MineSweeper__GameLayer__
 
 #include "cocos2d.h"
+#include "GridSprite.h"
 
 #define WINSIZE Director::getInstance()->getWinSize() // 画面サイズ取得用マクロ
+
+#define GRID_NUM_X 10
+#define GRID_NUM_Y 10
 
 class GameLayer : public cocos2d::Layer
 {
 protected:
     enum ZOrder {
         Z_Background,
+        Z_Grid,
     };
     
     enum Tab {
         T_Background,
+        T_Grid,
     };
     
     void initBackground(); // 背景の初期化
+    void initGrids(); // グリッドの初期表示
+    
+    GridSprite* newGrid(GridSprite::GridType gridType, GridSprite::PositionIndex positionIndex); // 新規グリッド作成
     
 public:
     GameLayer(); // コンストラクタ

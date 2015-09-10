@@ -42,6 +42,7 @@ bool GameLayer::init()
     _eventDispatcher->addEventListenerWithSceneGraphPriority(touchListener, this);
     
     initBackground(); // 背景の初期化
+    initGrids(); // グリッドの初期化
     
     return true;
 }
@@ -53,6 +54,28 @@ void GameLayer::initBackground()
     background->setAnchorPoint(Point::ZERO);
     background->setPosition(Point::ZERO);
     addChild(background, Z_Background, T_Background);
+}
+
+// グリッドの初期表示
+void GameLayer::initGrids()
+{
+    for (int x = 1; x <= GRID_NUM_X; x++) {
+        for (int y = 1; y <= GRID_NUM_Y; y++) {
+            newGrid(GridSprite::GridType::Normal, GridSprite::PositionIndex(x, y));
+        }
+    }
+    
+}
+
+// 新規グリッドの作成
+GridSprite* GameLayer::newGrid(GridSprite::GridType gridType, GridSprite::PositionIndex positionIndex)
+{
+    auto grid = GridSprite::create(positionIndex, gridType);
+    grid->setPositionIndex(positionIndex);
+    
+    addChild(grid, ZOrder::Z_Grid);
+    
+    return grid;
 }
 
 bool GameLayer::onTouchBegan(Touch* touch, Event* unused_event)

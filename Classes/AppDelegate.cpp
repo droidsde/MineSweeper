@@ -44,7 +44,10 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
     
-    glview->setDesignResolutionSize(WINSIZE.width, WINSIZE.height, ResolutionPolicy::FIXED_WIDTH);
+    // iPhone6 Plus 1242, 2208
+    // iPhone6 750, 1334
+    // iPhone5s 640, 1136
+    glview->setDesignResolutionSize(640, 1136, ResolutionPolicy::FIXED_WIDTH);
     
     // run
     auto scene = GameLayer::createScene();
