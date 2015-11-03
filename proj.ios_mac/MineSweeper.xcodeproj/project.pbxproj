@@ -59,14 +59,20 @@
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		E43D4B4B1BD3B33900AB263B /* selectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E43D4B4A1BD3B33900AB263B /* selectButton.png */; };
+		E449186B1BA5A560006D1C1B /* plist in Resources */ = {isa = PBXBuildFile; fileRef = E449186A1BA5A560006D1C1B /* plist */; };
 		E45955171B7C7738009E181E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E45955161B7C7738009E181E /* background.png */; };
 		E459551A1B7C774F009E181E /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E45955181B7C774F009E181E /* GameLayer.cpp */; };
+		E47970441BCEB00A00E7A6E2 /* SelectButtonSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47970421BCEB00A00E7A6E2 /* SelectButtonSprite.cpp */; };
 		E47A86D71BA0917E00C8530E /* bomb.png in Resources */ = {isa = PBXBuildFile; fileRef = E47A86D41BA0917E00C8530E /* bomb.png */; };
 		E47A86D81BA0917E00C8530E /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = E47A86D51BA0917E00C8530E /* button.png */; };
 		E47A86D91BA0917E00C8530E /* flag.png in Resources */ = {isa = PBXBuildFile; fileRef = E47A86D61BA0917E00C8530E /* flag.png */; };
 		E47A86DB1BA091A200C8530E /* opacityButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E47A86DA1BA091A200C8530E /* opacityButton.png */; };
 		E47A86DD1BA091AE00C8530E /* whiteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E47A86DC1BA091AE00C8530E /* whiteButton.png */; };
 		E47A86E01BA0942A00C8530E /* GridSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E47A86DE1BA0942A00C8530E /* GridSprite.cpp */; };
+		E4D6989E1BAFCD28009EF143 /* NParticleSystemQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D6989C1BAFCD28009EF143 /* NParticleSystemQuad.cpp */; };
+		E4D698A11BAFCD85009EF143 /* ParticleSystemPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D6989F1BAFCD85009EF143 /* ParticleSystemPool.cpp */; };
+		E4D698A41BAFE51D009EF143 /* GameMaster.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4D698A21BAFE51D009EF143 /* GameMaster.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,9 +160,13 @@
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		D6B0611A1803AB670077942B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		E43D4B4A1BD3B33900AB263B /* selectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectButton.png; sourceTree = "<group>"; };
+		E449186A1BA5A560006D1C1B /* plist */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plist; sourceTree = "<group>"; };
 		E45955161B7C7738009E181E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		E45955181B7C774F009E181E /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameLayer.cpp; sourceTree = "<group>"; };
 		E45955191B7C774F009E181E /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		E47970421BCEB00A00E7A6E2 /* SelectButtonSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SelectButtonSprite.cpp; sourceTree = "<group>"; };
+		E47970431BCEB00A00E7A6E2 /* SelectButtonSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectButtonSprite.h; sourceTree = "<group>"; };
 		E47A86D41BA0917E00C8530E /* bomb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bomb.png; sourceTree = "<group>"; };
 		E47A86D51BA0917E00C8530E /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
 		E47A86D61BA0917E00C8530E /* flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flag.png; sourceTree = "<group>"; };
@@ -164,6 +174,13 @@
 		E47A86DC1BA091AE00C8530E /* whiteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = whiteButton.png; sourceTree = "<group>"; };
 		E47A86DE1BA0942A00C8530E /* GridSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GridSprite.cpp; sourceTree = "<group>"; };
 		E47A86DF1BA0942A00C8530E /* GridSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridSprite.h; sourceTree = "<group>"; };
+		E4D6989C1BAFCD28009EF143 /* NParticleSystemQuad.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NParticleSystemQuad.cpp; sourceTree = "<group>"; };
+		E4D6989D1BAFCD28009EF143 /* NParticleSystemQuad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NParticleSystemQuad.h; sourceTree = "<group>"; };
+		E4D6989F1BAFCD85009EF143 /* ParticleSystemPool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleSystemPool.cpp; sourceTree = "<group>"; };
+		E4D698A01BAFCD85009EF143 /* ParticleSystemPool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleSystemPool.h; sourceTree = "<group>"; };
+		E4D698A21BAFE51D009EF143 /* GameMaster.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMaster.cpp; sourceTree = "<group>"; };
+		E4D698A31BAFE51D009EF143 /* GameMaster.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameMaster.h; sourceTree = "<group>"; };
+		E4F9F7531BD6A4990034D358 /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,11 +298,13 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E449186A1BA5A560006D1C1B /* plist */,
 				E47A86DC1BA091AE00C8530E /* whiteButton.png */,
 				E47A86DA1BA091A200C8530E /* opacityButton.png */,
 				E47A86D41BA0917E00C8530E /* bomb.png */,
 				E47A86D51BA0917E00C8530E /* button.png */,
 				E47A86D61BA0917E00C8530E /* flag.png */,
+				E43D4B4A1BD3B33900AB263B /* selectButton.png */,
 				E45955161B7C7738009E181E /* background.png */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -299,10 +318,19 @@
 			children = (
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
+				E4F9F7531BD6A4990034D358 /* Common.h */,
 				E45955181B7C774F009E181E /* GameLayer.cpp */,
 				E45955191B7C774F009E181E /* GameLayer.h */,
+				E4D698A21BAFE51D009EF143 /* GameMaster.cpp */,
+				E4D698A31BAFE51D009EF143 /* GameMaster.h */,
 				E47A86DE1BA0942A00C8530E /* GridSprite.cpp */,
 				E47A86DF1BA0942A00C8530E /* GridSprite.h */,
+				E47970421BCEB00A00E7A6E2 /* SelectButtonSprite.cpp */,
+				E47970431BCEB00A00E7A6E2 /* SelectButtonSprite.h */,
+				E4D6989C1BAFCD28009EF143 /* NParticleSystemQuad.cpp */,
+				E4D6989D1BAFCD28009EF143 /* NParticleSystemQuad.h */,
+				E4D6989F1BAFCD85009EF143 /* ParticleSystemPool.cpp */,
+				E4D698A01BAFCD85009EF143 /* ParticleSystemPool.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -403,7 +431,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = MDDB52YB8L;
+						DevelopmentTeam = 6SZY2S2VW6;
 					};
 				};
 			};
@@ -467,8 +495,10 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
+				E449186B1BA5A560006D1C1B /* plist in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				E43D4B4B1BD3B33900AB263B /* selectButton.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
@@ -502,10 +532,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				E4D6989E1BAFCD28009EF143 /* NParticleSystemQuad.cpp in Sources */,
+				E4D698A11BAFCD85009EF143 /* ParticleSystemPool.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				E47970441BCEB00A00E7A6E2 /* SelectButtonSprite.cpp in Sources */,
 				E47A86E01BA0942A00C8530E /* GridSprite.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				E4D698A41BAFE51D009EF143 /* GameMaster.cpp in Sources */,
 				E459551A1B7C774F009E181E /* GameLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -674,6 +708,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Keiichi Suzuki (2A79V5ZKMM)";
 				COPY_PHASE_STRIP = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -696,6 +731,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -705,6 +741,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Keiichi Suzuki (2A79V5ZKMM)";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (
@@ -725,6 +762,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 				VALIDATE_PRODUCT = YES;
 			};
