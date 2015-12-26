@@ -32,7 +32,8 @@ public:
     enum class GameStatus
     {
         Open,
-        Flag,
+        PlantFlag,
+        RemoveFlag,
     };
     
     static GameMaster* create(int bombNumber); // インスタンス生成

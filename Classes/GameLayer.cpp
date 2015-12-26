@@ -66,10 +66,6 @@ void GameLayer::initBackground()
 // グリッドの初期表示
 void GameLayer::initGrids(int bombNumber)
 {
-    for (int i = 0; i < BOMB_NUM; i++) {
-        newGrid(GridSprite::GridType::Bomb, getRandomGridPosition());
-    }
-    
     for (int x = 1; x <= GRID_NUM_X; x++) {
         for (int y = 1; y <= GRID_NUM_Y; y++) {
             int tag = GridSprite::getGenerateTag(GridSprite::PositionIndex(x, y));
@@ -81,16 +77,21 @@ void GameLayer::initGrids(int bombNumber)
         }
     }
     
+    for (int i = 0; i < BOMB_NUM; i++) {
+        int tag = GridSprite::getGenerateTag(getRandomGridPosition());
+        auto grid = (GridSprite*)(getChildByTag(tag));
+        grid->setGridType(GridSprite::GridType::Bomb);
+        
+    }
+    
 }
 
 void GameLayer::initSelectButton()
 {
     
     newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(1,1));
-    newSelectButton(SelectButtonSprite::ButtonType::Flag, SelectButtonSprite::PositionIndex(2,1));
-    newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(3,1));
-    newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(4,1));
-    newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(5,1));
+    newSelectButton(SelectButtonSprite::ButtonType::PlantFlag, SelectButtonSprite::PositionIndex(2,1));
+    newSelectButton(SelectButtonSprite::ButtonType::RemoveFlag, SelectButtonSprite::PositionIndex(3,1));
 }
 
 // 新規グリッドの作成
@@ -205,27 +206,39 @@ SelectButtonSprite* GameLayer::getTouchSelectButton(Point touchPos, SelectButton
 bool GameLayer::onTouchBegan(Touch* touch, Event* unused_event)
 {
     GridSprite* touchGrid = getTouchGrid(touch->getLocation());
-    SelectButtonSprite* touchSelectButton = getTouchSelectButton(touch->getLocation());
     
     if (touchGrid) {
         switch (_gameMaster->getGameStatus()) {
             case GameMaster::GameStatus::Open:
                 changeGridTexture(touch, touchGrid);
-                break;
-            case GameMaster::GameStatus::Flag:
+                return false;
+            case GameMaster::GameStatus::PlantFlag:
                 if (touchGrid) {
                     touchGrid->putFlag();
                 }
-                break;
+                return false;
+            case GameMaster::GameStatus::RemoveFlag:
+                if (touchGrid) {
+                    touchGrid->removeFlag();
+                }
+                return false;
         }
-    } else if (touchSelectButton) {
+    }
+    
+
+    SelectButtonSprite* touchSelectButton = getTouchSelectButton(touch->getLocation());
+    
+    if (touchSelectButton) {
         switch (touchSelectButton->getButtonType()) {
             case SelectButtonSprite::ButtonType::Open:
                 _gameMaster->changeGameStatus(GameMaster::GameStatus::Open);
-                break;
-            case SelectButtonSprite::ButtonType::Flag:
-                _gameMaster->changeGameStatus(GameMaster::GameStatus::Flag);
-                break;
+                return false;
+            case SelectButtonSprite::ButtonType::PlantFlag:
+                _gameMaster->changeGameStatus(GameMaster::GameStatus::PlantFlag);
+                return false;
+            case SelectButtonSprite::ButtonType::RemoveFlag:
+                _gameMaster->changeGameStatus(GameMaster::GameStatus::RemoveFlag);
+                return false;
         }
     }
     

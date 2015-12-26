@@ -47,6 +47,7 @@ public:
     void changeWhiteGrid(int i); // 白いグリッドに変更
     void changeTexture(GridType gridType); // 画像を変更
     void putFlag(); // Gridにフラグを置く
+    void removeFlag(); // Gridのフラグを削除する
     void putBomb(); // Gridに爆弾を置く
     void showNumber(int i); // グリッドの数字を表示
         
@@ -59,6 +60,17 @@ public:
     static int getGenerateTag(PositionIndex positionIndex); // 位置インデックスからタグを取得
     
 protected:
+    enum ZOrder {
+        Z_Grid,
+        Z_Flag,
+        Z_Bomb,
+    };
+    
+    enum Tag {
+        T_Grid,
+        T_Flag,
+        T_Bomb,
+    };
 };
 
 #endif /* defined(__LightsOut__GridSprite__) */

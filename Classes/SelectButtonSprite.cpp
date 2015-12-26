@@ -72,9 +72,11 @@ std::string SelectButtonSprite::getButtonImageFilePath(ButtonType buttonType)
 {
     switch (buttonType) {
         case ButtonType::Open:
-            return "selectButton.png";
-        case ButtonType::Flag:
-            return "selectButton.png";
+            return "openButton.png";
+        case ButtonType::PlantFlag:
+            return "selectFlagButton.png";
+        case ButtonType::RemoveFlag:
+            return "removeFlagButton.png";
         default:
             return "selectButton.png";
     }
@@ -83,8 +85,8 @@ std::string SelectButtonSprite::getButtonImageFilePath(ButtonType buttonType)
 // 位置インデックスからPointを取得
 Point SelectButtonSprite::getPointForPositionIndex(PositionIndex positionIndex)
 {
-    return Point(SELECT_BUTTON_SIZE * (positionIndex.x - 0.5),
-                 SELECT_BUTTON_SIZE * (positionIndex.y - 0.5) + WINSIZE.height * 1 / 5);
+    return Point(SELECT_BUTTON_SIZE * (positionIndex.x - 2) * 1.5 + (WINSIZE.width / 2),
+                 SELECT_BUTTON_SIZE * (positionIndex.y - 0.5) + WINSIZE.height / 5);
 }
 
 // 位置インデックスからタグを取得

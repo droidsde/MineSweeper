@@ -51,6 +51,12 @@
 		521A8EA919F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		757278DE1C037736000B7304 /* openButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278D81C037736000B7304 /* openButton.png */; };
+		757278DF1C037736000B7304 /* openedButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278D91C037736000B7304 /* openedButton.png */; };
+		757278E01C037736000B7304 /* removedFlagButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278DA1C037736000B7304 /* removedFlagButton.png */; };
+		757278E11C037736000B7304 /* removeFlagButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278DB1C037736000B7304 /* removeFlagButton.png */; };
+		757278E21C037736000B7304 /* selectedFlagButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278DC1C037736000B7304 /* selectedFlagButton.png */; };
+		757278E31C037736000B7304 /* selectFlagButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 757278DD1C037736000B7304 /* selectFlagButton.png */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
@@ -152,6 +158,12 @@
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		757278D81C037736000B7304 /* openButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openButton.png; sourceTree = "<group>"; };
+		757278D91C037736000B7304 /* openedButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = openedButton.png; sourceTree = "<group>"; };
+		757278DA1C037736000B7304 /* removedFlagButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removedFlagButton.png; sourceTree = "<group>"; };
+		757278DB1C037736000B7304 /* removeFlagButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = removeFlagButton.png; sourceTree = "<group>"; };
+		757278DC1C037736000B7304 /* selectedFlagButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectedFlagButton.png; sourceTree = "<group>"; };
+		757278DD1C037736000B7304 /* selectFlagButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = selectFlagButton.png; sourceTree = "<group>"; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -298,6 +310,12 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				757278D81C037736000B7304 /* openButton.png */,
+				757278D91C037736000B7304 /* openedButton.png */,
+				757278DA1C037736000B7304 /* removedFlagButton.png */,
+				757278DB1C037736000B7304 /* removeFlagButton.png */,
+				757278DC1C037736000B7304 /* selectedFlagButton.png */,
+				757278DD1C037736000B7304 /* selectFlagButton.png */,
 				E449186A1BA5A560006D1C1B /* plist */,
 				E47A86DC1BA091AE00C8530E /* whiteButton.png */,
 				E47A86DA1BA091A200C8530E /* opacityButton.png */,
@@ -431,7 +449,7 @@
 				LastUpgradeCheck = 0500;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = 6SZY2S2VW6;
+						DevelopmentTeam = Y8ER96774C;
 					};
 				};
 			};
@@ -487,12 +505,15 @@
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				757278E21C037736000B7304 /* selectedFlagButton.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				E47A86D91BA0917E00C8530E /* flag.png in Resources */,
+				757278DF1C037736000B7304 /* openedButton.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				E47A86D81BA0917E00C8530E /* button.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				757278E11C037736000B7304 /* removeFlagButton.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				E449186B1BA5A560006D1C1B /* plist in Resources */,
@@ -506,9 +527,12 @@
 				E45955171B7C7738009E181E /* background.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				757278DE1C037736000B7304 /* openButton.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				E47A86DB1BA091A200C8530E /* opacityButton.png in Resources */,
+				757278E31C037736000B7304 /* selectFlagButton.png in Resources */,
 				E47A86DD1BA091AE00C8530E /* whiteButton.png in Resources */,
+				757278E01C037736000B7304 /* removedFlagButton.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				E47A86D71BA0917E00C8530E /* bomb.png in Resources */,
 			);
@@ -574,7 +598,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -598,6 +624,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -610,7 +637,9 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				ENABLE_BITCODE = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -632,6 +661,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -708,7 +738,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Keiichi Suzuki (2A79V5ZKMM)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COPY_PHASE_STRIP = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -741,7 +771,7 @@
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Keiichi Suzuki (2A79V5ZKMM)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = (

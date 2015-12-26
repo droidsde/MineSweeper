@@ -64,10 +64,19 @@ void GridSprite::putFlag()
     if (getGridType() == GridType::Normal || getGridType() == GridType::Bomb) {
         setFlag(true);
     
-        auto flag = Sprite::create();
-        flag->setTexture("flag.png");
-        flag->setPosition(Point(getContentSize() / 2));
-        addChild(flag);
+        auto flag = Sprite::create("flag.png");
+        if (flag) {
+            flag->setPosition(Point(getContentSize() / 2));
+            addChild(flag, Z_Flag, T_Flag);
+        }
+    }
+}
+
+void GridSprite::removeFlag()
+{
+    if (getFlag()) {
+        setFlag(false);
+        removeChildByTag(T_Flag);
     }
 }
 

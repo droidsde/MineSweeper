@@ -19,7 +19,8 @@ public:
     enum class ButtonType
     {
         Open,
-        Flag,
+        PlantFlag,
+        RemoveFlag,
     };
     
     // 位置インデックス
