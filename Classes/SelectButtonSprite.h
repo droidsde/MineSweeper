@@ -43,12 +43,14 @@ public:
     SelectButtonSprite(); // コンストラクタ
     static SelectButtonSprite* create(PositionIndex positionIndex, ButtonType buttonType); // インスタンス生成
     virtual bool init(PositionIndex positionIndex, ButtonType buttonType); // 初期化
-    void changeTexture(ButtonType gridType); // 画像を変更
+    void changeButtonImageTexture(); // ボタンの画像を変更
+    void changeSelectedButtonImageTexture(); // 選択中のボタン画像に変更
     
     CC_SYNTHESIZE(ButtonType, _buttonType, ButtonType); // ボタンの種類
     CC_PROPERTY(PositionIndex, _positionIndex, PositionIndex); // 位置インデックス
     
     std::string getButtonImageFilePath(ButtonType buttonType); // ボタン画像取得
+    std::string getSelectedButtonImageFilePath(ButtonType buttonType); // 選択中のボタン画像取得
     static cocos2d::Point getPointForPositionIndex(PositionIndex positionIndex); // 位置インデックスからポイントを取得
     static int getGenerateTag(PositionIndex positionIndex); // 位置インデックスからタグを取得
     

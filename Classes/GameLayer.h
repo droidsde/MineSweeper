@@ -38,8 +38,10 @@ protected:
     void changeGridTexture(cocos2d::Touch* touch, GridSprite* grid); // Gridの画像を変更する
     
     ParticleSystemPool* _particlePool; // パーティクルプール
-    
     GameMaster* _gameMaster; // ゲームマスター
+    SelectButtonSprite* _openButton;
+    SelectButtonSprite* _plantFlagButton;
+    SelectButtonSprite* _removeFlagButton;
     
     GridSprite* newGrid(GridSprite::GridType gridType, GridSprite::PositionIndex positionIndex); // 新規グリッド作成
     SelectButtonSprite* newSelectButton(SelectButtonSprite::ButtonType buttonType, SelectButtonSprite::PositionIndex positionIndex); // 選択ボタン作成

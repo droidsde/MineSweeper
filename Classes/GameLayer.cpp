@@ -89,9 +89,9 @@ void GameLayer::initGrids(int bombNumber)
 void GameLayer::initSelectButton()
 {
     
-    newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(1,1));
-    newSelectButton(SelectButtonSprite::ButtonType::PlantFlag, SelectButtonSprite::PositionIndex(2,1));
-    newSelectButton(SelectButtonSprite::ButtonType::RemoveFlag, SelectButtonSprite::PositionIndex(3,1));
+    _openButton = newSelectButton(SelectButtonSprite::ButtonType::Open, SelectButtonSprite::PositionIndex(1,1));
+    _plantFlagButton = newSelectButton(SelectButtonSprite::ButtonType::PlantFlag, SelectButtonSprite::PositionIndex(2,1));
+    _removeFlagButton = newSelectButton(SelectButtonSprite::ButtonType::RemoveFlag, SelectButtonSprite::PositionIndex(3,1));
 }
 
 // 新規グリッドの作成
@@ -231,12 +231,21 @@ bool GameLayer::onTouchBegan(Touch* touch, Event* unused_event)
     if (touchSelectButton) {
         switch (touchSelectButton->getButtonType()) {
             case SelectButtonSprite::ButtonType::Open:
+                _openButton->changeSelectedButtonImageTexture();
+                _plantFlagButton->changeButtonImageTexture();
+                _removeFlagButton->changeButtonImageTexture();
                 _gameMaster->changeGameStatus(GameMaster::GameStatus::Open);
                 return false;
             case SelectButtonSprite::ButtonType::PlantFlag:
+                _openButton->changeButtonImageTexture();
+                _plantFlagButton->changeSelectedButtonImageTexture();
+                _removeFlagButton->changeButtonImageTexture();
                 _gameMaster->changeGameStatus(GameMaster::GameStatus::PlantFlag);
                 return false;
             case SelectButtonSprite::ButtonType::RemoveFlag:
+                _openButton->changeButtonImageTexture();
+                _plantFlagButton->changeButtonImageTexture();
+                _removeFlagButton->changeSelectedButtonImageTexture();
                 _gameMaster->changeGameStatus(GameMaster::GameStatus::RemoveFlag);
                 return false;
         }

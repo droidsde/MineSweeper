@@ -43,11 +43,16 @@ bool SelectButtonSprite::init(PositionIndex positionIndex, ButtonType buttonType
     return true;
 }
 
-// 画像を変更
-void SelectButtonSprite::changeTexture(ButtonType buttonType)
+// ボタンの画像を変更
+void SelectButtonSprite::changeButtonImageTexture()
 {
-    _buttonType = buttonType;
     setTexture(getButtonImageFilePath(_buttonType));
+}
+
+// 選択中のボタン画像に変更
+void SelectButtonSprite::changeSelectedButtonImageTexture()
+{
+    setTexture(getSelectedButtonImageFilePath(_buttonType));
 }
 
 // 位置インデックスを返す
@@ -77,6 +82,21 @@ std::string SelectButtonSprite::getButtonImageFilePath(ButtonType buttonType)
             return "selectFlagButton.png";
         case ButtonType::RemoveFlag:
             return "removeFlagButton.png";
+        default:
+            return "selectButton.png";
+    }
+}
+
+// 選択中のボタン画像取得
+std::string SelectButtonSprite::getSelectedButtonImageFilePath(ButtonType buttonType)
+{
+    switch (buttonType) {
+        case ButtonType::Open:
+            return "openedButton.png";
+        case ButtonType::PlantFlag:
+            return "selectedFlagButton.png";
+        case ButtonType::RemoveFlag:
+            return "removedFlagButton.png";
         default:
             return "selectButton.png";
     }

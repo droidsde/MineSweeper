@@ -62,12 +62,14 @@ void GridSprite::changeTexture(GridType gridType)
 void GridSprite::putFlag()
 {
     if (getGridType() == GridType::Normal || getGridType() == GridType::Bomb) {
-        setFlag(true);
-    
-        auto flag = Sprite::create("flag.png");
-        if (flag) {
-            flag->setPosition(Point(getContentSize() / 2));
-            addChild(flag, Z_Flag, T_Flag);
+        if (!getFlag()) {
+            setFlag(true);
+            
+            auto flag = Sprite::create("flag.png");
+            if (flag) {
+                flag->setPosition(Point(getContentSize() / 2));
+                addChild(flag, Z_Flag, T_Flag);
+            }
         }
     }
 }
